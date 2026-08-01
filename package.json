@@ -1,9 +1,15 @@
 {
   "name": "logseq-plugin-pdf-print",
   "version": "0.0.1",
+  "description": "Print a Logseq page as PDF via window.print(), with optional theme-aware printing",
+  "author": "alifyasa",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alifyasa/logseq-plugin-pdf-print"
+  },
   "main": "dist/index.html",
   "logseq": {
-    "id": "superychen-logseq-plugin-pdf-print",
+    "id": "alifyasa-logseq-plugin-pdf-print",
     "icon": "./icon.png"
   },
   "scripts": {
