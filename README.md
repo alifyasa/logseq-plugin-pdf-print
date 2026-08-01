@@ -16,4 +16,4 @@ Load the unpacked `dist/` folder as the plugin in Logseq (Plugins → Load unpac
 ## Tips
 
 1. If there is no response when clicking, check that the system printer service (`Print Spooler` on Windows) is running, then retry.
-2. Print theme: Settings → Plugins → PDF Print → **Print theme**. Choose `aware` to keep Logseq theme colors, or `unaware` for light (theme-ignored) printing.
+2. Print theme: Settings → Plugins → PDF Print → **Print theme**. Defaults to `unaware` (light / theme-ignored). Choose `aware` to keep Logseq theme colors.

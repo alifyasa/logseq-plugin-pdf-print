@@ -93,7 +93,7 @@ hidePrint(document.getElementById('app-container').children, ['left-container'])
 hidePrint(document.getElementById('left-container').children, ['main-container']);
 hidePrint(document.getElementById('main-container').children, ['main-content-container']);
 
-var printTheme = document.documentElement.dataset.pdfPrintTheme || 'aware';
+var printTheme = document.documentElement.dataset.pdfPrintTheme || 'unaware';
 var themeSnapshot = null;
 
 if (printTheme === 'unaware') {
