@@ -1,4 +1,4 @@
-import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -18,10 +18,12 @@ const distPkg = {
   author: rootPkg.author,
   repository: rootPkg.repository,
   main: "index.html",
-  logseq: rootPkg.logseq,
+  logseq: {
+    ...rootPkg.logseq,
+    icon: "./icon.png",
+  },
 };
 
 writeFileSync(join(dist, "package.json"), JSON.stringify(distPkg, null, 2) + "\n");
-copyFileSync(join(root, "icon.png"), join(dist, "icon.png"));
 
 console.log("Prepared dist/ as loadable Logseq plugin root");

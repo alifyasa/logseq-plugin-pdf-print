@@ -11,7 +11,8 @@
   "type": "module",
   "logseq": {
     "id": "alifyasa-logseq-plugin-pdf-print",
-    "icon": "./icon.png"
+    "name": "PDF Print",
+    "icon": "./public/icon.png"
   },
   "scripts": {
     "dev": "vite",
