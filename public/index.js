@@ -2,6 +2,9 @@ import "@logseq/libs";
 
 const model = {
   printPdf() {
+    const mode = logseq.settings?.printTheme ?? "aware";
+    parent.document.documentElement.dataset.pdfPrintTheme = mode;
+
     fetch('print.js')
       .then(response => response.text())
       .then(jsContent => {
@@ -19,6 +22,18 @@ const model = {
 };
 
 async function main() {
+  logseq.useSettingsSchema([
+    {
+      key: "printTheme",
+      type: "enum",
+      default: "aware",
+      title: "Print theme",
+      description: "Theme colors keeps the current Logseq theme. Light ignores the theme and prints with a light background.",
+      enumChoices: ["aware", "unaware"],
+      enumPicker: "radio",
+    },
+  ]);
+
   fetch('print.css')
     .then(response => response.text())
     .then(cssContent => {

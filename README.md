@@ -11,3 +11,4 @@ Print a logseq page as a PDF file, using `window.print()`, preserves most styles
 ## Tips
 
 1. If there is no response when clicking, it is recommended to check if the system's printer service `Print Spooler` is running. Retry after run the service.
+2. Print theme: Settings → Plugins → PDF Print → **Print theme**. Choose `aware` to keep Logseq theme colors, or `unaware` for light (theme-ignored) printing.

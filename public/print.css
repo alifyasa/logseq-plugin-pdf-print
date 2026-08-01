@@ -26,6 +26,10 @@
         z-index: -1;
     }
 
+    html[data-pdf-print-theme="unaware"]::after {
+        background-color: #fff !important;
+    }
+
     .add-button-link-wrap,
     .references,
     .lazy-visibility,
