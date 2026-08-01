@@ -8,19 +8,23 @@
     "url": "https://github.com/alifyasa/logseq-plugin-pdf-print"
   },
   "main": "dist/index.html",
+  "type": "module",
   "logseq": {
     "id": "alifyasa-logseq-plugin-pdf-print",
     "icon": "./icon.png"
   },
   "scripts": {
-    "start": "wmr",
-    "build": "wmr build",
-    "serve": "wmr serve"
+    "dev": "vite",
+    "build": "vite build && node scripts/prepare-dist.mjs",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@logseq/libs": "^0.0.1-alpha.35"
   },
   "devDependencies": {
-    "wmr": "^3.7.2"
+    "vite": "^6.3.5"
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true
   }
 }
